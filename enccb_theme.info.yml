@@ -2,7 +2,7 @@ name: 'ENCCB theme'
 type: theme
 core_version_requirement: ^8 || ^9
 description: 'Theme for the EuroCC NCC Belgium website'
-package: Other
+package: core
 version: 0.1
 base theme: stable
 libraries:

@@ -30,12 +30,22 @@ function enccb_theme_form_system_theme_settings_alter(&$form, \Drupal\Core\Form\
   );
 }
 
-function foo_preprocess_node(&$variables) {
+function enccb_theme_preprocess_page(&$variables) {
   $vars = array('account_twitter', 'account_linkedin');
-  
   foreach($vars as $var) {
     $variables[$var] = theme_get_setting($var);
   }
 }
+
+function enccb_theme_preprocess_block(&$variables) {
+    // add the Bootstrap class to main navbar
+    if($variables['attributes']['id'] == 'block-enccb-theme-main-menu') {
+        $variables['attributes']['class'][] = 'navbar';
+        $variables['attributes']['class'][] = 'navbar-expand-md';
+        $variables['attributes']['class'][] = 'navbar-dark';
+        $variables['attributes']['class'][] = 'bg-dark';
+    }
+}
+
 
 ?>
