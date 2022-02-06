@@ -1,0 +1,41 @@
+<?php
+
+function enccb_theme_form_system_theme_settings_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id = NULL) {
+  // Work-around for a core bug affecting admin themes. See issue #943212.
+  if (isset($form_id)) {
+    return;
+  }
+  
+  // Contact info
+  $form['enccb_contact'] = array(
+    '#type' => 'details',
+    '#title' => t('Contact Info'),
+    '#description' => t('Contact information'),
+    '#open' => TRUE,
+    
+    // twitter
+    'account_twitter' => array(
+      '#type'          => 'textfield',
+      '#title'         => t('Twitter'),
+      '#default_value' => theme_get_setting('account_twitter'),
+      '#description'   => t("Link to your Twitter account"),
+    ),
+    // linkedin
+    'account_linkedin' => array(
+      '#type'          => 'textfield',
+      '#title'         => t('Linkedin'),
+      '#default_value' => theme_get_setting('account_linkedin'),
+      '#description'   => t("Link to your LinkedIn account"),
+    )
+  );
+}
+
+function foo_preprocess_node(&$variables) {
+  $vars = array('account_twitter', 'account_linkedin');
+  
+  foreach($vars as $var) {
+    $variables[$var] = theme_get_setting($var);
+  }
+}
+
+?>

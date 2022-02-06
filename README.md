@@ -12,3 +12,8 @@ On your computer,
 4. Any time you change something and want to check the result, go in `Admin > Configuration > Development > Performances` and "clear all caches". 
 
 ... Have fun!
+
+## Useful links
+
++ [Adding custom theme parameters](https://sarahcodes.medium.com/using-custom-theme-settings-in-templates-in-drupal-8-925391b8cff1).
++ [Another example](https://labs.tadigital.com/index.php/2019/07/03/advanced-theme-settings-in-drupal-8/) of custom parameters (with upload).

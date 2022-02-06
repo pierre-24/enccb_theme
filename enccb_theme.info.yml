@@ -17,7 +17,6 @@ regions:
   breadcrumb:         'Breadcrumb'
   page_title:         'Page Title'
   local_tasks:        'Local Tasks'
-  content:            'Content (Constrained)'
-  content_fullwidth:  'Content (Edge-to-edge)'
+  content:            'Content'
   footer:             'Footer'
 
