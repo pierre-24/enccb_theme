@@ -1,0 +1,9 @@
+.header{
+    background: red;
+    height: 150px;
+    display: block;
+}
+
+body {
+    background: green;
+}

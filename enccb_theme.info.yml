@@ -1,0 +1,23 @@
+name: 'ENCCB theme'
+type: theme
+core_version_requirement: ^8 || ^9
+description: 'Theme for the EuroCC NCC Belgium website'
+package: Other
+version: 0.1
+base theme: stable
+libraries:
+  - enccb_theme/global-styling
+regions:
+  header:             'Header'
+  primary_menu:       'Main menu'
+  secondary_menu:     'Secondary menu'
+  highlighted:        'Highlighted'
+  help:               'Help'
+  section_nav:        'Section Nav'
+  breadcrumb:         'Breadcrumb'
+  page_title:         'Page Title'
+  local_tasks:        'Local Tasks'
+  content:            'Content (Constrained)'
+  content_fullwidth:  'Content (Edge-to-edge)'
+  footer:             'Footer'
+
