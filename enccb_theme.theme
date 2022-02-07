@@ -41,9 +41,18 @@ function enccb_theme_preprocess_block(&$variables) {
     // add the Bootstrap class to main navbar
     if($variables['attributes']['id'] == 'block-enccb-theme-main-menu') {
         $variables['attributes']['class'][] = 'navbar';
-        $variables['attributes']['class'][] = 'navbar-expand-md';
+        $variables['attributes']['class'][] = 'navbar-expand-lg';
         $variables['attributes']['class'][] = 'navbar-dark';
         $variables['attributes']['class'][] = 'bg-dark';
+        
+        // use bootstrap for the menu as well
+        $variables['content']['#attributes']['use_bootstrap'] = TRUE;
+    }
+}
+
+function enccb_theme_theme_suggestions_menu_alter(array &$suggestions, array $variables) {
+    if(isset($variables['attributes']['use_bootstrap'])) {
+        $suggestions[] = $variables['theme_hook_original'].'__bootstrap';
     }
 }
 
