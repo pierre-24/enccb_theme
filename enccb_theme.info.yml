@@ -13,10 +13,8 @@ regions:
   secondary_menu:     'Secondary menu'
   highlighted:        'Highlighted'
   help:               'Help'
-  section_nav:        'Section Nav'
   breadcrumb:         'Breadcrumb'
   page_title:         'Page Title'
-  local_tasks:        'Local Tasks'
   content:            'Content'
   footer:             'Footer'
 
