@@ -8,13 +8,15 @@ base theme: stable
 libraries:
   - enccb_theme/global-styling
 regions:
+  secondary_menu:     'Top menu'
   header:             'Header'
   primary_menu:       'Main menu'
-  secondary_menu:     'Secondary menu'
   highlighted:        'Highlighted'
   help:               'Help'
   breadcrumb:         'Breadcrumb'
   page_title:         'Page Title'
   content:            'Content'
-  footer:             'Footer'
+  footer:             'Footer (bottom)'
+  footer_left:        'Footer (left column)'
+  footer_right:       'Footer (right column)'
 

@@ -46,7 +46,7 @@
 <div class="layout-container">
 
   <header role="banner">
-    <div class="container">
+    <div class="container secondary-menu">
       {{ page.secondary_menu }}
     </div>
     
@@ -56,10 +56,6 @@
   </header>
 
   {{ page.primary_menu }}
-
-  <div class="container">
-    {{ page.breadcrumb }}
-  </div>
    
   <div class="container">
     {{ page.highlighted }}
@@ -76,15 +72,29 @@
       {{ page.page_title }}
     </div>
 
+    <div class="container">
+      {{ page.breadcrumb }}
+    </div>
+
     <div class="layout-content container">
       {{ page.content }}
     </div>
   </main>
 
-  {% if page.footer %}
+  {% if page.footer or page.footer_left or page.footer_right %}
     <footer role="contentinfo">
       <div class="container">
-        {{ page.footer }}
+        <div class="row">
+            <div class="col-lg-6 col-12">
+                {{ page.footer_left }}
+            </div>
+            <div class="col-lg-6 col-12">
+                {{ page.footer_right }}
+            </div>
+            <div class="coil-12">
+                {{ page.footer }}
+            </div>
+        </div>
       </div>
     </footer>
   {% endif %}
