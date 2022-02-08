@@ -1,0 +1,90 @@
+$main_color: #B8860B;
+$main_color_darker: darken($main_color, 10%);
+
+a {
+    text-decoration: none;
+    color: $main_color;
+    
+    &:hover {
+        color: $main_color_darker; 
+    }
+}
+
+.primary-menu {
+    background: $main_color;
+    
+    a {
+        color: white !important;
+        
+        &::hover {
+            color: #ddd !important;
+        }
+    }
+}
+
+
+.secondary-menu ul {
+    text-align: right;
+    padding: 8px 0;
+    
+    li {
+        display: inline-block;
+        margin-left: 1rem;
+        font-size: 85%;
+    }
+}
+
+// page title
+#block-enccb-theme-page-title {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid $main_color;
+    
+    h1 {
+        color: $main_color;
+    }
+}
+
+// admin links
+#block-tabs ul {
+    text-align: right;
+    margin-bottom: 1rem;
+    
+    li {
+        display: inline-block;
+        margin-left: 1rem;
+        font-size: 85%;
+        background: $main_color;
+        padding: 0 .5rem;
+        
+        &:hover  {
+            background: $main_color_darker; 
+        }
+        
+        a {
+            color: white;
+        }
+    }
+}
+
+footer {
+    background: #333;
+    padding: 32px 0px;
+    color: white;
+    margin-top: 2rem;
+    
+    h2 {
+        font-variant: small-caps;
+        font-size: 110%;
+        font-weight: bold;
+        margin-top: 1rem;
+    }
+
+    a {
+        color: white;
+        
+        &:hover {
+            color: $main_color;
+        }
+    }
+}
