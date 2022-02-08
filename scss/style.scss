@@ -7,7 +7,12 @@ a {
     
     &:hover {
         color: $main_color_darker; 
+        text-decoration: underline dotted; 
     }
+}
+
+header {
+    padding-bottom: 1rem;
 }
 
 .primary-menu {
@@ -22,6 +27,12 @@ a {
     }
 }
 
+.highlighted {
+    .alert {
+        margin-top: 1rem;
+    }
+}
+
 
 .secondary-menu ul {
     text-align: right;
@@ -30,7 +41,7 @@ a {
     li {
         display: inline-block;
         margin-left: 1rem;
-        font-size: 85%;
+        font-size: 90%;
     }
 }
 
@@ -38,7 +49,6 @@ a {
 #block-enccb-theme-page-title {
     margin-top: 2rem;
     margin-bottom: 1rem;
-    border-bottom: 1px solid $main_color;
     
     h1 {
         color: $main_color;
