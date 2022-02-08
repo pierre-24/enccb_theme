@@ -12,7 +12,10 @@ a {
 }
 
 header {
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
+    background: url('../header-bg.svg');
+    background-attachment: fixed;
+    background-position: center top;
 }
 
 .primary-menu {
