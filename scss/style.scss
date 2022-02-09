@@ -34,8 +34,6 @@ header#enccb-header {
 #enccb-highlighted {
     .alert {
         margin-top: 1rem;
-        
-        
     }
 }
 
@@ -59,10 +57,6 @@ header#enccb-header {
         margin-top: 2rem;
         margin-bottom: 1rem;
     }
-}
-
-article {
-    margin-top: 1rem;
 }
 
 // admin links tabs
@@ -96,6 +90,39 @@ form .description {
     margin-top: .25rem;
     font-size: .875em;
     color: #6c757d;
+}
+
+// article
+article {
+    margin-top: 1rem;
+    
+    &.full-page {
+        h1 {
+            font-variant: small-caps;
+            font-size: 150%;
+            font-weight: bold;
+            color: $main_color;
+        }
+    
+        .field-image {
+            margin-top: 1rem;
+            
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+        
+        .field-tags {
+            margin-top: 1rem;
+            
+            a {
+                display: inline-block;
+                border: 1px solid $main_color;
+                padding: 0 .5rem;
+            }
+        }
+    }
 }
 
 // footer
