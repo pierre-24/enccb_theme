@@ -97,6 +97,8 @@ article {
     margin-top: 1rem;
     
     &.full-page {
+        margin-top: 2rem;
+        
         h1 {
             font-variant: small-caps;
             font-size: 150%;
@@ -114,7 +116,7 @@ article {
         }
         
         .field-tags {
-            margin-top: 1rem;
+            margin: 1rem 0;
             
             a {
                 display: inline-block;

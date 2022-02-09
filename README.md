@@ -16,7 +16,7 @@ On your computer,
 
 ... Have fun!
 
-## Useful links
+## Useful links and stuffs
 
 + [Adding custom theme parameters](https://sarahcodes.medium.com/using-custom-theme-settings-in-templates-in-drupal-8-925391b8cff1).
 + [Another example](https://labs.tadigital.com/index.php/2019/07/03/advanced-theme-settings-in-drupal-8/) of custom parameters (with upload).
@@ -24,3 +24,4 @@ On your computer,
 + The one of [`hook_preprocess_HOOK()`](https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21theme.api.php/function/hook_preprocess_HOOK/9.3.x) (where `hook` is the theme name and `HOOK` is never really defined, but is related to the block name).
 + The one of [`hook_theme_suggestions_HOOK_alter()`](https://api.drupal.org/api/drupal/core!lib!Drupal!Core!Render!theme.api.php/function/hook_theme_suggestions_HOOK_alter/9.3.x)
 + [Suggestions based on region](https://www.drupal.org/forum/support/theme-development/2017-07-13/extra-template-name-suggestions-for-main-menus-based-on).
++ Get the type of node: `$variables['node']->getType()` in `THEME_preprocess_node()`.
