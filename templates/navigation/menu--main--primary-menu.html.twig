@@ -20,11 +20,6 @@
 #}
 {% import _self as menus %}
 
-{#
-  We call a macro which calls itself to render the full tree.
-  @see https://twig.symfony.com/doc/1.x/tags/macro.html
-#}
-
 <div class="container">
     <!-- collapse button -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,10 +29,17 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul{{ attributes.addClass('navbar-nav') }}>
         {% for item in items %}
-          <li{{ item.attributes.addClass('nav-item') }}>
-            <a href="{{ item.url }}" class="nav-link">{{ item.title }}</a>
             {% if item.below %}
-                {# to be implemented! #}
+                <li{{ item.attributes.addClass(['nav-item', 'dropdown']) }}>
+                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ item.title }}</a>
+                <ul class="dropdown-menu">
+                    {% for subitem in item.below %}
+                        <li><a class="dropdown-item" href="{{ subitem.url }}">{{ subitem.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <li{{ item.attributes.addClass('nav-item') }}>
+                <a href="{{ item.url }}" class="nav-link">{{ item.title }}</a>
             {% endif %}
           </li>
         {% endfor %}

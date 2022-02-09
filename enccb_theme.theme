@@ -49,15 +49,9 @@ function enccb_theme_preprocess_block(&$variables) {
 
     // add the Bootstrap class to main navbar
     if($variables['attributes']['id'] == 'block-enccb-theme-main-menu') {
-        $variables['attributes']['class'][] = 'primary-menu';
         $variables['attributes']['class'][] = 'navbar';
         $variables['attributes']['class'][] = 'navbar-expand-lg';
         $variables['attributes']['class'][] = 'navbar-dark';
-    }
-    
-    // add a class to the secondary menu
-    if($variables['attributes']['id'] == 'block-enccb-theme-footer') {
-        $variables['attributes']['class'][] = 'secondary-menu';
     }
 }
 

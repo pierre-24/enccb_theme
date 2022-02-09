@@ -45,19 +45,21 @@
 #}
 <div class="layout-container">
 
-  <header role="banner">
-    <div class="container secondary-menu">
+  <header role="banner" id="enccb-header">
+    <div class="container" id="enccb-secondary-menu">
       {{ page.secondary_menu }}
     </div>
     
-    <div class="container">
+    <div class="container" id="enccb-page-header">
       {{ page.header }}
     </div>
   </header>
-
-  {{ page.primary_menu }}
    
-  <div class="container highlighted">
+  <div id="enccb-primary-menu">
+  {{ page.primary_menu }}
+  </div>
+   
+  <div class="container" id="enccb-highlighted">
     {{ page.highlighted }}
   </div>
     
@@ -65,10 +67,10 @@
     {{ page.help }}
   </div>
 
-  <main role="main">
+  <main role="main" id="enccb-main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
     
-    <div class="container">
+    <div class="container" id="enccb-page-title">
       {{ page.page_title }}
     </div>
 
@@ -82,7 +84,7 @@
   </main>
 
   {% if page.footer or page.footer_left or page.footer_right %}
-    <footer role="contentinfo">
+    <footer role="contentinfo" id="enccb-footer">
       <div class="container">
         <div class="row">
             <div class="col-lg-4 col-12">
