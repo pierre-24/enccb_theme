@@ -13,8 +13,7 @@ a {
 
 header {
     padding-bottom: 2rem;
-    background: url('../header-bg.svg');
-    background-attachment: fixed;
+    background-image: url('../header-bg.svg');
     background-position: center top;
     text-align: center;
 }
@@ -25,8 +24,9 @@ header {
     a {
         color: white !important;
         
-        &::hover {
+        &:hover {
             color: #ddd !important;
+            text-decoration: none;
         }
     }
 }
@@ -34,6 +34,8 @@ header {
 .highlighted {
     .alert {
         margin-top: 1rem;
+        
+        
     }
 }
 
@@ -51,12 +53,16 @@ header {
 
 // page title
 #block-enccb-theme-page-title {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
     
     h1 {
         color: $main_color;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
     }
+}
+
+article {
+    margin-top: 1rem;
 }
 
 // admin links
@@ -72,17 +78,23 @@ header {
         padding: 0 .5rem;
         
         &:hover  {
-            background: $main_color_darker; 
+            background: $main_color_darker;
         }
         
         a {
             color: white;
+            
+            &:hover {
+                text-decoration: none;
+            }
         }
     }
 }
 
 footer {
     background: #333;
+    background-image: url('../footer-bg.svg');
+    background-position: center bottom;
     padding: 32px 0px;
     color: white;
     margin-top: 2rem;
