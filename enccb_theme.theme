@@ -62,5 +62,31 @@ function enccb_theme_theme_suggestions_menu_alter(array &$suggestions, array $va
     }
 }
 
+function enccb_theme_preprocess_input(&$variables) {
+    $type = $variables['element']['#type'];
+    
+    if(in_array($type, array('textfield', 'password', 'email')))
+        $variables['attributes']['class'][] = 'form-control';
+    elseif($type == 'checkbox')
+        $variables['attributes']['class'][] = 'form-check-input';
+    elseif($type == 'submit') {
+        $variables['attributes']['class'][] = 'btn';
+        $variables['attributes']['class'][] = 'btn-primary';
+    }
+}
+
+function enccb_theme_preprocess_form_element(&$variables) {
+    $variables['attributes']['class'][] = 'mb-3';
+    $variables['description']['attributes']['class'][] = 'form-text';
+}
+
+function enccb_theme_preprocess_textarea(&$variables) {
+    $variables['attributes']['class'][] = 'form-control';
+}
+
+function enccb_theme_preprocess_form_element_label(&$variables) {
+    // set form-label to every label
+    $variables['attributes']['class'][] = 'form-label';
+} 
 
 ?>
