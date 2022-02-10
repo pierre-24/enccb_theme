@@ -74,7 +74,7 @@
   <div class="col-lg-4 col-12">
   {{ title_prefix }}
     <h1{{ title_attributes }}>
-      {{ label }}
+      {% if not page %}<a href="{{ url }}" rel="bookmark">{% endif %}{{ label }}{% if not page %}</a>{% endif %}
     </h1>
   {{ title_suffix }}
 

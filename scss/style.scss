@@ -96,7 +96,7 @@ form .description {
 article {
     margin-top: 1rem;
     
-    &.full-page {
+    &.full {
         margin-top: 2rem;
         
         h1 {
@@ -122,6 +122,43 @@ article {
                 display: inline-block;
                 border: 1px solid $main_color;
                 padding: 0 .5rem;
+            }
+        }
+    }
+}
+
+.views-row article.full {
+    border-top: 1px solid $main_color;
+    padding-top: 1rem;
+}
+
+// pager
+nav.pager {
+    border-top: 1px solid $main_color;
+    padding-top: 1rem;
+    
+    ul {
+        text-align: right;
+        li {
+            display: inline-block;
+            background: $main_color;
+            padding: 0 .5rem;
+            
+            &.is-active {
+                background: white;
+                border: 1px solid $main_color;
+            }
+            
+            &:not(.is-active):hover  {
+                background: $main_color_darker;
+            }
+            
+            &:not(.is-active) a {
+                color: white;
+                
+                &:hover {
+                    text-decoration: none;
+                }
             }
         }
     }

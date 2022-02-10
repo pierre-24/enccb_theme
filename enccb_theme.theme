@@ -98,9 +98,9 @@ function enccb_theme_preprocess_form_element_label(&$variables) {
 /* --- NODE: */
 function enccb_theme_preprocess_node(&$variables) {
     
-    if($variables['page']) { // only for full page views
+    if(!$variables['teaser']) { // only for full page views
         // add a specific class
-        $variables['attributes']['class'][] = 'full-page';
+        $variables['attributes']['class'][] = 'full';
         
         // switch some field to the left column
         $TO_SWITCH = array('field_tags', 'field_image');
