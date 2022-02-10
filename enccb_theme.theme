@@ -97,11 +97,9 @@ function enccb_theme_preprocess_form_element_label(&$variables) {
 
 /* --- NODE: */
 function enccb_theme_preprocess_node(&$variables) {
-    
-    if(!$variables['teaser']) { // only for full page views
-        // add a specific class
+    if($variables['view_mode'] == 'full') {
         $variables['attributes']['class'][] = 'full';
-        
+    
         // switch some field to the left column
         $TO_SWITCH = array('field_tags', 'field_image');
         $left_column = array();
@@ -121,5 +119,12 @@ function enccb_theme_preprocess_field(&$variables) {
     // add a class to the field
     $variables['attributes']['class'] = str_replace('_', '-', $variables['field_name']);
 }
+
+/* --- VIEWS */
+function enccb_theme_preprocess_views_view(&$variables) {
+    // add view mode as a class
+    $variables['attributes']['class'][] = 'view-mode-'.$variables['view']->rowPlugin->options['view_mode'];
+}
+
 
 ?>

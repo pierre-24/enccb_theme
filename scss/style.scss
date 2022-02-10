@@ -95,41 +95,84 @@ form .description {
 // article
 article {
     margin-top: 1rem;
-    
-    &.full {
-        margin-top: 2rem;
+}
+
+// view mode: full
+.view-mode-full article {
+    border-top: 1px solid $main_color;
+    padding-top: 1rem;
+}
+
+article.full {
+    margin-top: 2rem;
         
-        h1 {
-            font-variant: small-caps;
-            font-size: 150%;
-            font-weight: bold;
-            color: $main_color;
-        }
-    
-        .field-image {
-            margin-top: 1rem;
-            
-            img {
-                max-width: 100%;
-                height: auto;
-            }
-        }
+    h1 {
+        font-variant: small-caps;
+        font-size: 2rem;
+        font-weight: bold;
+        color: $main_color;
+    }
+
+    .field-image {
+        margin-top: 1rem;
         
-        .field-tags {
-            margin: 1rem 0;
-            
-            a {
-                display: inline-block;
-                border: 1px solid $main_color;
-                padding: 0 .5rem;
-            }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    
+    .field-tags {
+        margin: 1rem 0;
+        
+        a {
+            display: inline-block;
+            border: 1px solid $main_color;
+            padding: 0 .5rem;
         }
     }
 }
 
-.views-row article.full {
-    border-top: 1px solid $main_color;
-    padding-top: 1rem;
+// view mode: tile
+.view-mode-tile article {
+
+    .field-image img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .overlay {
+        position: absolute;
+        bottom: 0;
+        padding: 1rem;
+        margin: 0;
+        width: 100%;
+        color: #ccc;
+        background-color: rgba(0,0,0,0.5);
+        
+        h2 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            text-align: center;
+            font-variant: small-caps;
+        }
+        
+        .overlay-hidden-content {
+            display: none;
+        }
+    }
+    
+    &:hover .overlay {
+        bottom: unset;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 100%;
+        padding-top: 33%;
+        
+        .overlay-hidden-content {
+            display: block;
+        }
+    }
 }
 
 // pager
