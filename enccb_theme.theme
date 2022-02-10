@@ -71,7 +71,7 @@ function enccb_theme_preprocess_input(&$variables) {
     $type = $variables['element']['#type'];
     
     // add the bootstrap class to form
-    if(in_array($type, array('textfield', 'password', 'email')))
+    if(in_array($type, array('textfield', 'password', 'email', 'search')))
         $variables['attributes']['class'][] = 'form-control';
     elseif($type == 'checkbox')
         $variables['attributes']['class'][] = 'form-check-input';
