@@ -1,6 +1,7 @@
 $main_color: #B8860B;
 $main_color_darker: darken($main_color, 10%);
 
+// general
 a {
     text-decoration: none;
     color: $main_color;
@@ -11,6 +12,32 @@ a {
     }
 }
 
+img.align-left {
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+}
+
+img.align-right {
+    margin-left: .5rem;
+    margin-bottom: .5rem;
+}
+
+blockquote {
+    border-left: 1px solid $main_color;
+    padding-left: 2rem;
+}
+
+blockquote:before {
+    content: '“';
+    font-family: Times, serif;
+    font-size: 3rem;
+    color: $main_color;
+    position: absolute;
+    margin-left: -1.75rem;
+    margin-top: -1rem;
+}
+
+// header
 header#enccb-header {
     padding-bottom: 2rem;
     background-image: url('../header-bg.svg');
@@ -31,6 +58,7 @@ header#enccb-header {
     }
 }
 
+// highlighted
 #enccb-highlighted {
     .alert {
         margin-top: 1rem;
