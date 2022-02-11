@@ -133,6 +133,35 @@ article.full {
     }
 }
 
+// view mode: teaser
+.view-mode-teaser article {
+
+    border-top: 1px solid $main_color;
+    padding-top: 1rem;
+
+    .field-image img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    h2 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        font-variant: small-caps;
+    }
+    
+    .field-tags {
+        margin: 1rem 0;
+        
+        a {
+            display: inline-block;
+            border: 1px solid $main_color;
+            padding: 0 .5rem;
+        }
+    }
+
+}
+
 // view mode: tile
 .view-mode-tile article {
 
