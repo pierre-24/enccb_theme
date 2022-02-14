@@ -57,3 +57,4 @@ Works well for user stories (*i.e.*, interviews).
 + The one of [`hook_theme_suggestions_HOOK_alter()`](https://api.drupal.org/api/drupal/core!lib!Drupal!Core!Render!theme.api.php/function/hook_theme_suggestions_HOOK_alter/9.3.x)
 + [Suggestions based on region](https://www.drupal.org/forum/support/theme-development/2017-07-13/extra-template-name-suggestions-for-main-menus-based-on).
 + Get the type of node: `$variables['node']->getType()` in `THEME_preprocess_node()`.
++ There is a [footnote module](https://www.drupal.org/project/footnotes) that integrates with the editor.
