@@ -93,7 +93,7 @@ function enccb_theme_preprocess_node(&$variables) {
         $variables['attributes']['class'][] = 'full';
 
         // switch some field to the left column
-        $TO_SWITCH = array('field_tags', 'field_image');
+        $TO_SWITCH = array('field_tags', 'field_image', 'field_interviewee');
         $left_column = array();
         foreach($TO_SWITCH as $what) {
             if(isset($variables['content'][$what])) {

@@ -18,12 +18,16 @@ The regions are defined in [`enccb_theme.info.yml`](enccb_theme.info.yml).
 + `footer_right` ("Footer (right column)"): Right (and larger, since `col-lg-8` is used) column of the footer. Can contain the `Search` block.
 + `footer` ("Footer (bottom)"): Full length region of the footer, below the two column.
 
-## CSS
+
+## Specific theme elements
+
+
+### CSS
 
 + adds `.view-mode-[mode]` to each views
 + adds `.[field-name]` to each field (e.g., `.field-image`, `.field-tags`, ...)
 
-## Note: tiling
+### The `tile` view mode
 
 To use the `.view-mode-tile` class:
 
@@ -32,7 +36,13 @@ To use the `.view-mode-tile` class:
 + Then, it is possible to fully emulate a Bootstrap grid system: 1) use `Unformatted list`, 2) add some `col-xx` class in the `settings` (and remove the default one), and 3) in `advanced`, change `CSS class` and add `row`!
 + One can also add a custom image style in `Admin > Configuration > Media > Image Styles`. The combination `scale width 576` + `Crop 576x384` works well.
 
-## Other tips and tricks
+### The `interviewee` field
+
+Add an `interviewee` field to any content type to get an extra box (in left column).
+Works well for user stories (*i.e.*, interviews).
+
+
+## Tips and tricks
 
 + To remove author/date, go in `Admin > Structure > Content types`, edit one content (say, "article") and go in `Display settings` to uncheck `Display author and date information`.
 + If you want to have submenu, you need to set the "Number of levels to display" in the "main menu" block. Also, use the "Expand all menu links" option, so that the submenu appears on every page.
