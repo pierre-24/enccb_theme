@@ -1,6 +1,6 @@
 # Drupal theme `enccb_theme`
 
-Theme for the [EuroCC NCC Belgium website](https://www.enccb.be/). Currently in development.
+Theme for the [EuroCC NCC Belgium website](https://www.enccb.be/). Currently, in development.
 
 The templates originate from the `stable` core theme. The goal is to touch as small of them as possible.
 
