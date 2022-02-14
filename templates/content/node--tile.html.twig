@@ -69,16 +69,16 @@
 #}
 <article{{ attributes }}>
 
-  
+
   <a href="{{ url }}">
   <div class="card">
   {{ content.field_image }}
-  
+
   <div class="overlay">
       {{ title_prefix }}
-        <h2{{ title_attributes }}>{{ label }}</h2>
+        <h3{{ title_attributes }}>{{ label }}</h3>
       {{ title_suffix }}
-      
+
       <div{{ content_attributes.addClass('overlay-hidden-content') }}>
           {% if display_submitted %}
             <p{{ author_attributes }}>
@@ -86,13 +86,13 @@
                 {{ metadata }}
             </p>
           {% endif %}
-          
+
           {% for key, field in content %}
             {% if key != 'field_image' %}{{ field }}{% endif %} {# everything but field_image! #}
           {% endfor %}
-          
+
       </div> {# content #}
-  
+
   </div> {# overlay #}
   </div> {# card #}
   </a>
