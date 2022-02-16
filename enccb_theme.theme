@@ -11,7 +11,7 @@ function enccb_theme_form_system_theme_settings_alter(&$form, \Drupal\Core\Form\
   }
 
   // Contact info
-  $form['enccb_contact'] = array(
+  $form['theme_settings'] = array(
     '#type' => 'details',
     '#title' => t('Specific settings'),
     '#description' => t('Specific theme settings'),
@@ -39,7 +39,7 @@ function enccb_theme_preprocess_block(&$variables) {
     if (isset($variables['elements']['#id'])) {
         $region = Block::load($variables['elements']['#id'])->getRegion();
         $variables['content']['#attributes']['region'] = $region;
-        $variables['attribute']['region'] = $region;
+        $variables['attributes']['region'] = $region;
     }
 
     // add the Bootstrap class to main navbar
@@ -47,6 +47,11 @@ function enccb_theme_preprocess_block(&$variables) {
         $variables['attributes']['class'][] = 'navbar';
         $variables['attributes']['class'][] = 'navbar-expand-lg';
         $variables['attributes']['class'][] = 'navbar-dark';
+    }
+
+    if($variables['plugin_id'] == 'contact_block') {
+      $variables['attributes']['class'][] = 'row justify-content-end';
+      $variables['content']['#attributes']['class'][] = 'col-lg-8';
     }
 }
 
@@ -63,7 +68,7 @@ function enccb_theme_preprocess_input(&$variables) {
     $type = $variables['element']['#type'];
 
     // add the bootstrap class to form
-    if(in_array($type, array('textfield', 'password', 'email', 'search')))
+    if(in_array($type, array('textfield', 'password', 'email', 'search', 'url')))
         $variables['attributes']['class'][] = 'form-control';
     elseif($type == 'checkbox')
         $variables['attributes']['class'][] = 'form-check-input';
