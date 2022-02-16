@@ -146,6 +146,12 @@ form .description {
 // article
 article {
     margin-top: 1rem;
+
+  &.home-page  h2 {
+    clear: both;
+    border-top: 1px solid $main_color;
+    padding-top: 1rem;
+  }
 }
 
 // view mode: full

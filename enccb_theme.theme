@@ -49,6 +49,7 @@ function enccb_theme_preprocess_block(&$variables) {
         $variables['attributes']['class'][] = 'navbar-dark';
     }
 
+    // tweak contact block
     if($variables['plugin_id'] == 'contact_block') {
       $variables['attributes']['class'][] = 'row justify-content-end';
       $variables['content']['#attributes']['class'][] = 'col-lg-8';
