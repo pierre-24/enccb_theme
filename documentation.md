@@ -41,6 +41,10 @@ To use the `.view-mode-tile` class:
 Add an `interviewee` field to any content type to get an extra box (in left column).
 Works well for user stories (*i.e.*, interviews).
 
+### Recommended modules
+
++ [Contact block](https://www.drupal.org/project/contact_block)
+
 
 ## Tips and tricks
 
