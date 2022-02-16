@@ -181,9 +181,13 @@ article.full {
 
     .field-tags {
         margin: 1rem 0;
-      display: inline-block;
+      div {
+        display: inline-block;
+        margin-right: .5rem;
+      }
 
-        a {
+
+      a {
             display: inline-block;
             border: 1px solid $main_color;
             padding: 0 .5rem;
@@ -222,7 +226,10 @@ article.full {
 
     .field-tags {
         margin: 1rem 0;
-      display: inline-block;
+        div {
+          display: inline-block;
+          margin-right: 1rem;
+        }
 
         a {
             display: inline-block;
