@@ -3,11 +3,12 @@ $main_color_darker: darken($main_color, 10%);
 
 @import url('https://fonts.googleapis.com/css2?family=Cantarell&display=swap');
 
+// general
 body {
   font-family: 'Cantarell', sans-serif;
+  font-size: 18px;
 }
 
-// general
 a {
   text-decoration: none;
   color: $main_color;
@@ -81,14 +82,8 @@ header#enccb-header {
 // highlighted
 #enccb-highlighted {
 
-  padding-top: 1rem;
-  background-image: linear-gradient(
-      to bottom,
-      lighten($main_color, 60%) 0%,
-      lighten($main_color, 60%) 50%,
-      white 50%,
-      white 100%
-  );
+  padding: 1rem 0;
+  background-color: lighten($main_color, 60%);
 
   h2 {
     font-variant: small-caps;
@@ -108,6 +103,7 @@ header#enccb-header {
 
 // page title
 #enccb-page-title {
+  max-width: 1140px;
 
   h1 {
     color: $main_color;
@@ -149,9 +145,19 @@ form .description {
   color: #6c757d;
 }
 
+// main
+.layout-content {
+  max-width: 1140px;
+}
 // article
 article {
   margin-top: 1rem;
+
+  h2 {
+    font-size: 1.65rem;
+    font-weight: bold;
+    color: $main_color;
+  }
 
   &.home-page h2 {
     clear: both;
@@ -170,18 +176,20 @@ article.full {
   margin-top: 2rem;
 
   h1 {
-    font-variant: small-caps;
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: 2.25rem;
+    font-weight: 500;
     color: $main_color;
+    margin-bottom: 1rem;
   }
 
   .field-image {
-    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
 
     img {
       max-width: 100%;
       height: auto;
+      border: 1px solid #ddd;
     }
   }
 
@@ -206,7 +214,7 @@ article.full {
     background: #eee;
     padding: .5rem 1rem;
     overflow: auto;
-    margin: 1rem 0;
+    margin-bottom: 1rem;
   }
 }
 
@@ -227,9 +235,8 @@ article.full {
   }
 
   h2 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    font-variant: small-caps;
   }
 
   .field-tags {

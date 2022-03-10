@@ -69,33 +69,39 @@
 #}
 <article{{ attributes }}>
 
-  <div class="row">
-  
-  <div class="col-lg-4 col-12">
-  {{ title_prefix }}
+  <div class="row justify-content-center">
+
+    {%  if right_column_content %}
+      <div{{ content_attributes.addClass(['col-xl-8', 'col-12']) }}>
+    {% else %}
+      <div{{ content_attributes }}>
+    {% endif %}
+
+    {{ title_prefix }}
     <h1{{ title_attributes }}>
       {% if not page %}<a href="{{ url }}" rel="bookmark">{% endif %}{{ label }}{% if not page %}</a>{% endif %}
     </h1>
-  {{ title_suffix }}
+    {{ title_suffix }}
 
-  {% if display_submitted %}
-    <footer>
-      {{ author_picture }}
-      <div{{ author_attributes }}>
-        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-        {{ metadata }}
-      </div>
-    </footer>
-  {% endif %}
-  
-  {{ left_column_content }}
-  
-  </div>
-
-  <div{{ content_attributes.addClass(['col-lg-8', 'col-12']) }}>
     {{ content }}
+
+    {% if display_submitted %}
+      <footer>
+        {{ author_picture }}
+        <div{{ author_attributes }}>
+          {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+          {{ metadata }}
+        </div>
+      </footer>
+    {% endif %}
   </div>
-  
+
+    {%  if right_column_content %}
+      <div class="col-xl-4 col-12">
+        {{ right_column_content }}
+      </div>
+    {% endif %}
+
   </div>
 
 </article>
