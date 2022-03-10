@@ -65,6 +65,11 @@ header#enccb-header {
       text-decoration: none;
     }
   }
+
+  .btn-primary  {
+    background-color: $main_color_darker;
+    border-color: $main_color_darker;
+  }
 }
 
 // secondary menu
