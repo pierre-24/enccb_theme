@@ -1,6 +1,12 @@
 $main_color: #B8860B;
 $main_color_darker: darken($main_color, 10%);
 
+@import url('https://fonts.googleapis.com/css2?family=Cantarell&display=swap');
+
+body {
+  font-family: 'Cantarell', sans-serif;
+}
+
 // general
 a {
   text-decoration: none;
