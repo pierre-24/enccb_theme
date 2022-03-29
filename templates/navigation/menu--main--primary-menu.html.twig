@@ -27,7 +27,7 @@
     </button>
     <!-- collapsable content -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul{{ attributes.addClass('navbar-nav') }}>
+        <ul{{ attributes.addClass(['navbar-nav', 'me-auto'] ) }}>
         {% for item in items %}
             {% if item.below %}
                 <li{{ item.attributes.addClass(['nav-item', 'dropdown']) }}>
@@ -44,5 +44,11 @@
           </li>
         {% endfor %}
         </ul>
+      <form class="d-flex" action="/search/node" method="get">
+        <div class="input-group input-group-sm">
+          <input class="form-control" type="search" placeholder="Search" aria-label="Search" title="Enter the terms to search for" name="keys" >
+          <button class="btn btn-primary" type="submit">Search</button>
+        </div>
+      </form>
     </div>
 </div>

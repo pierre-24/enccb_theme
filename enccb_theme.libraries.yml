@@ -6,3 +6,4 @@ global-styling:
       css/style.css: {}
   js:
     js/bootstrap.bundle.5.0.2.min.js: {}
+    js/extra.js: {}

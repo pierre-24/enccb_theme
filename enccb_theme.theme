@@ -48,12 +48,6 @@ function enccb_theme_preprocess_block(&$variables) {
         $variables['attributes']['class'][] = 'navbar-expand-lg';
         $variables['attributes']['class'][] = 'navbar-dark';
     }
-
-    // tweak contact block
-    if($variables['plugin_id'] == 'contact_block') {
-      $variables['attributes']['class'][] = 'row justify-content-end';
-      $variables['content']['#attributes']['class'][] = 'col-lg-8';
-    }
 }
 
 /* --- MENU */
@@ -99,17 +93,17 @@ function enccb_theme_preprocess_node(&$variables) {
         $variables['attributes']['class'][] = 'full';
 
         // switch some field to the left column
-        $TO_SWITCH = array('field_tags', 'field_image', 'field_interviewee');
-        $left_column = array();
+        $TO_SWITCH = array('field_interviewee');
+        $right_column = array();
         foreach($TO_SWITCH as $what) {
             if(isset($variables['content'][$what])) {
-                $left_column[$what] = $variables['content'][$what];
+                $right_column[$what] = $variables['content'][$what];
                 unset($variables['content'][$what]);
             }
         }
 
         // save
-        $variables['left_column_content'] = $left_column;
+        $variables['right_column_content'] = $right_column;
     }
 }
 
